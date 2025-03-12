@@ -1,5 +1,390 @@
-h2{
-    color: gray;
-    background: linear-gradient(red, blue);
-    text-align: center;
+*{
+    margin: 0px;
+    padding: 0px;
+    scroll-behavior: smooth;
+    overscroll-behavior: none;
 }
+a ,li {
+    color: white;
+    list-style: none;
+}
+
+.main_section{
+    width: 1519px;
+    height: 640px;
+}
+
+.navbar{
+    position: sticky;
+    top: 0;
+    background: rgb(207, 198, 198);
+    height: 50px;
+    z-index: 1;
+}
+
+.navbar li{
+    list-style: none;
+    color: white;
+    text-decoration: none;
+}
+
+.navbar a{
+    text-decoration: none;
+    padding-left: 28px;
+    display: inline-block;
+    font-size: 1.2rem;
+}
+.logo{
+    /* width: 100px;
+    height: 100px;
+    position: absolute;
+    top: -36px;
+    left: -30px; */
+    width: 200px;
+    height: 97px;
+    position: absolute;
+    top: -22px;
+    left: 15px;
+    opacity: 0.81;
+}
+
+.logo:hover{
+    transform: scale(1.006);
+    transition: all 1s;
+}
+
+/* .logo-title a{
+    position: absolute;
+    top: 6.5px;
+    left: 5px;
+    font-size: 24px;
+    font-weight: bold;
+} */
+
+.navbar-p{
+    display: flex;
+    position: absolute;
+    left: 230px;
+    top: 10px;
+}
+
+.navbar-p li:hover{
+    transform: scale(1.009);
+    transition: all .5s;
+}
+
+.navbar a::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    display: block;
+    background: white;
+    transition: all 0.8s;
+}
+
+.navbar a:hover::after{
+    width: 100%;
+}
+
+.user-actions{
+    position: relative;
+    left: -15px;
+}
+.user-actions img{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: -10px;
+    transition: transform 40ms ease-out;
+}
+.user-actions img:hover{
+    transform: scale(1.04);
+}
+
+ /* Dropdown Menu */
+ .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #d8c7e7a7;
+    list-style: none;
+    min-width: 290px;
+    border-radius: 5px;
+    box-shadow: 1px 4px 20px rgba(0, 0, 0, 0.2);
+    z-index: 3;
+    overflow: hidden;
+}
+
+ .dropdown-menu li a {
+    padding: 10px 5px;
+    display: inline-block;
+    color: rgb(113, 109, 109);
+    font-size: 20px;
+}
+
+.dropdown:hover .dropdown-menu {
+        display: block;
+}
+
+.dropdown a{
+    color: rgb(255, 255, 255);
+}
+
+.navbar-2{
+    position: absolute;
+    top: 10px;
+    display: flex;
+    left: 63%;
+
+}
+
+ /* Search Bar */
+ .search-bar {
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: -3.5px;
+    margin-left: 30px;
+}
+
+.search-bar input {
+    padding: 8px;
+    border: none;
+    background: white;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.search-bar button {
+    padding: 8px 12px;
+    border: none;
+    background-color: #555;
+    color: white;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    transition: all 0.6s;
+    background-color: #6c6666;
+    transform: scale(1.01);
+}
+
+.pic{
+    background-image: url("pic.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 48px;
+    left: 0px;
+}
+.para{
+    font-size: 4.8rem;
+    color: white;
+    position: absolute;
+    top: 100px;
+    left: 5%;
+    line-height: 100%;
+}
+
+.linking{
+    display: flex;
+    position: absolute;
+    top: 51%;
+    left: 80px;
+}
+
+.linking p{
+    font-size: 1.5rem;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 5px 25px;
+    cursor: pointer;
+}
+
+.link-bar{
+    margin-right: 20px;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+}
+
+.link-bar::before{
+    content: '';
+    width: 0%;
+    background: rgba(75, 105, 157, 0.885);
+    position: absolute;
+    top: 0;
+    left: 0px;
+    border-radius: 10px;
+    bottom: 0;
+    opacity: 0.5;
+    transition: all 1.2s ease-in-out;
+
+}
+
+.link-bar:hover::before{
+    width: 100%;
+    box-shadow: 0px 1px 10px rgba(60, 60, 60, 0.9);
+}
+
+#product{
+    position: relative;
+    width: 1519px;
+    height: 700px;
+}
+
+.deal1{
+    border-bottom: 1px solid #e7eaf3;
+    width: 500px;
+    position: relative;
+    left: 700px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    
+}
+.deal-title{
+    font-size: 20px;
+    display: flex;
+    position: absolute;
+    top: -23px;
+    left: 170px;
+    justify-content: center;
+    border-bottom: 2px solid yellow;
+
+}
+
+.product-item{
+    background-color: rgba(250, 250, 250, 0.97);
+    width: 260px;
+    height: 310px;
+    position: relative;
+    display: inline-block;
+    left: 10px;
+    margin-left: 5px;
+    border: 0.1px solid transparent;
+}
+
+.product-item:hover{
+    box-shadow: 0.5px 0.5px 11px rgba(33,33,33,.2); 
+    transition: all .49s;
+    transform: scaleY(1.009);
+
+}
+.product-item img{
+    width: 200px;
+    height: 160px;
+    position: absolute;
+    left: 5px;
+    bottom: 65px;
+}
+
+.item-title{
+    font-size: 0.9rem;
+    color: rgb(0, 0, 0);
+    background-color: none;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.item-des{
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 255px;
+    font-size: 1.01rem;
+    color: #7571d9;
+}
+
+.cart{
+    display: flex;
+    margin-top: 20px;
+    position: absolute;
+    top: 240px;
+
+}
+.cart img {
+    width: 30px;
+    height: 30px;
+    margin-left: 150px;
+    position: relative;
+    top: -7px;
+    left: -8px;
+    cursor: pointer;
+}
+.cart img:hover{
+    transform: scale(1.09);
+    transition: all .5s;
+}
+
+.cost{
+    font-size: 1.2rem;
+    margin-left: 10px;
+}
+
+.product-type{
+    display: flex;
+    position: relative;
+    top: 10px;
+    float: right;
+    right: 50px;
+    margin-bottom: 20px;
+}
+
+.side-deal{
+    width: 380px;
+    height: 600px;
+    background-color: #fbfbf0;
+    border: 1px rgb(0, 0, 0);
+    position: absolute;
+    left: 20px;
+    top: 16.5px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.offer{
+    display: flex;
+    margin-top: 30px;
+
+}
+
+.speical-offer{
+    font-size: 1.8rem;
+    margin-left: 20px;
+    margin-right: 200px;
+    width: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.save{
+    width: 100px;
+    height: 100px;
+    border: 1px transparent;
+    border-radius: 50%;
+    background: yellow;
+}
+
+.save-offer
+{
+    font-size: 1.5rem;
+    position: relative;
+    top: 20px;
+    left: 25px;
+}
+
+.offer img{
+    position: absolute;
+    top: 160px;
+    left: 30px;
+}
+.offer-title ,.offer-cost ,.offer-cost1{
+    position: absolute;
+    top: 450px;
+    left: 27%;
+    font-size: 1rem;
+    width: 200px;
+}
+   
